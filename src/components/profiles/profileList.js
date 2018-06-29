@@ -5,9 +5,6 @@ var PropTypes = require("prop-types");
 //They use the data passed down to them via props by the top level components aka Controller Views.
 //ProfileList is child component of top level component called ProfilesPage.
 class ProfileList extends React.Component {
-
-
-
     render() {
         const createProfileRow = (profile) => {
             return (
@@ -28,15 +25,17 @@ class ProfileList extends React.Component {
                 <br/>
                 <table className="table table-striped table-hover">
                     <thead className="thead-light">
-                        <th>Name</th>
-                        <th>Batting Style</th>
-                        <th>Matches</th>
-                        <th>Runs</th>
-                        <th>Average</th>
-                        <th>High Score</th>
+                        <tr>
+                            <th>Name</th>
+                            <th>Batting Style</th>
+                            <th>Matches</th>
+                            <th>Runs</th>
+                            <th>Average</th>
+                            <th>High Score</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        {this.props.profiles.map(createProfileRow, this)}
+                        {this.props.profiles.map(createProfileRow)}
                     </tbody>
                 </table>
             </div>

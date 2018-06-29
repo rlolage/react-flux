@@ -8,7 +8,7 @@ class ProfilesPage extends React.Component {
 
 
     componentWillMount() {
-        this.setState({profiles : [ProfilesApi.getAllProfiles()]});
+        this.setState({profiles : ProfilesApi.getAllProfiles()});
     }
     
     render() {
